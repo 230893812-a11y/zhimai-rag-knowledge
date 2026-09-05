@@ -140,31 +140,31 @@ plugins:
       localGraph:
         drag: true
         zoom: true
-        depth: 2
-        scale: 1.05
-        repelForce: 0.7
+        depth: 1
+        scale: 0.9
+        repelForce: 0.9
         centerForce: 0.3
-        linkDistance: 40
-        fontSize: 0.75
-        opacityScale: 1
+        linkDistance: 55
+        fontSize: 0.6
+        opacityScale: 0.8
         removeTags: []
-        showTags: true
+        showTags: false
         focusOnHover: true
         enableRadial: false
       globalGraph:
         drag: true
         zoom: true
         depth: -1
-        scale: 0.85
-        repelForce: 0.75
-        centerForce: 0.25
-        linkDistance: 45
-        fontSize: 0.8
-        opacityScale: 1
+        scale: 0.55
+        repelForce: 1.2
+        centerForce: 0.15
+        linkDistance: 75
+        fontSize: 0.45
+        opacityScale: 0.7
         removeTags: []
         showTags: false
         focusOnHover: true
-        enableRadial: true
+        enableRadial: false
     layout:
       position: right
       priority: 10
