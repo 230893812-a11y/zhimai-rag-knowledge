@@ -11,6 +11,15 @@
   --zhimai-shadow: 0 18px 50px rgba(88, 25, 38, 0.09);
 }
 
+/* 公开站统一使用深色背景，避免首次进入时出现白屏/白色主题 */
+html, body {
+  background: #08080d !important;
+  color: #f3e9ed;
+}
+body .page, body .center, body .outer, body .page-header {
+  background: #08080d !important;
+}
+
 :root[saved-theme="dark"] {
   --zhimai-accent: #ff4d67;
   --zhimai-accent-2: #a78bfa;
