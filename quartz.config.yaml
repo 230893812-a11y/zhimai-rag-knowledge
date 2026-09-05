@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 知脉 RAG 公开知识库
+  pageTitle: 知脉 RAG 知识库
   pageTitleSuffix: " · 知脉 RAG"
   enableSPA: true
   enablePopovers: true
@@ -20,24 +20,24 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#4f46e5"
-        tertiary: "#0891b2"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#fffafa"
+        lightgray: "#f1dfe2"
+        gray: "#a9868c"
+        darkgray: "#5d333b"
+        dark: "#241015"
+        secondary: "#d92f4c"
+        tertiary: "#7c3aed"
+        highlight: rgba(217, 47, 76, 0.12)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#a5b4fc"
-        tertiary: "#67e8f9"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#08080d"
+        lightgray: "#2a171d"
+        gray: "#8c747a"
+        darkgray: "#d9cbd0"
+        dark: "#fff7f8"
+        secondary: "#ff4d67"
+        tertiary: "#a78bfa"
+        highlight: rgba(255, 77, 103, 0.14)
         textHighlight: "#b3aa0288"
 plugins:
   - source: "@quartz-community/created-modified-date"
@@ -231,8 +231,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        资料索引: https://zhimai-rag-knowledge.pages.dev/图谱条目/
+        AI 问答: https://knowledge-rag-307709-12-1480606328.sh.run.tcloudbase.com/
     layout:
       position: footer
       priority: 50
