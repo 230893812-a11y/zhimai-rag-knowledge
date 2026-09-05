@@ -114,6 +114,25 @@ body {
 }
 .zhimai-open-graph:hover { transform: translateY(-1px); filter: brightness(1.05); }
 
+/* 全库图谱打开后覆盖整个浏览器窗口 */
+.graph > .global-graph-outer {
+  z-index: 99999 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: var(--light) !important;
+  backdrop-filter: none !important;
+}
+.graph > .global-graph-outer > .global-graph-container {
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
 .graph .global-graph-icon:hover { opacity: 1; transform: scale(1.05); }
 
 .zhimai-graph-guide {
