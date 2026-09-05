@@ -10,3 +10,9 @@ title: 全屏知识图谱
   <p class="zhimai-graph-hint">可拖动节点、滚轮缩放；点击节点查看资料。按 Esc 返回。</p>
   <p><a href="../">← 返回知识库首页</a></p>
 </div>
+
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => document.querySelector(".graph-outer > .global-graph-icon")?.click(), 350)
+})
+</script>
