@@ -80,9 +80,35 @@ body {
   background: rgba(5, 5, 10, 0.93);
 }
 .graph .global-graph-icon {
+  z-index: 3;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0.4rem !important;
+  margin: 0.45rem !important;
   border-radius: 9px;
   background: var(--zhimai-panel-strong);
   border: 1px solid var(--zhimai-border);
+  opacity: 0.9;
+}
+
+.graph .global-graph-icon:hover { opacity: 1; transform: scale(1.05); }
+
+.zhimai-graph-guide {
+  margin: 1.1rem 0 2rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--zhimai-border);
+  border-left: 3px solid var(--zhimai-accent);
+  border-radius: 12px;
+  background: var(--zhimai-panel);
+}
+.zhimai-graph-guide strong { color: var(--zhimai-accent); font-size: 1.05rem; }
+.zhimai-graph-guide p { margin: 0.45rem 0 0; color: var(--darkgray); }
+.zhimai-graph-guide kbd {
+  padding: 0.12rem 0.38rem;
+  border: 1px solid var(--zhimai-border);
+  border-radius: 4px;
+  background: var(--zhimai-panel-strong);
+  font-size: 0.82em;
 }
 
 article { line-height: 1.8; }
