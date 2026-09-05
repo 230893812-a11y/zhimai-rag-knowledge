@@ -114,6 +114,13 @@ body {
 }
 .zhimai-open-graph:hover { transform: translateY(-1px); filter: brightness(1.05); }
 
+.zhimai-graph-launch { text-align: center; padding: 3rem 1rem; }
+.zhimai-graph-launch .zhimai-open-graph { text-decoration: none; }
+.zhimai-graph-hint { color: var(--darkgray); }
+body[data-slug="graph"] .left, body[data-slug="graph"] .right,
+body[data-slug="graph"] .page-header, body[data-slug="graph"] .page-footer,
+body[data-slug="graph"] .zhimai-graph-launch { position: relative; z-index: 100000; }
+
 /* 全库图谱打开后覆盖整个浏览器窗口 */
 .graph > .global-graph-outer {
   z-index: 99999 !important;
