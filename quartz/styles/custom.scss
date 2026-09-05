@@ -91,6 +91,29 @@ body {
   opacity: 0.9;
 }
 
+/* 全库图谱页的显式入口：不需要寻找右侧小图标 */
+.zhimai-open-graph {
+  position: static !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-height: 2.5rem;
+  padding: 0.55rem 1rem !important;
+  margin: 0.35rem 0 0.15rem !important;
+  color: #fff !important;
+  background: var(--zhimai-accent) !important;
+  border: 0 !important;
+  border-radius: 999px;
+  opacity: 1 !important;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  box-shadow: 0 8px 20px var(--zhimai-glow);
+}
+.zhimai-open-graph:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
 .graph .global-graph-icon:hover { opacity: 1; transform: scale(1.05); }
 
 .zhimai-graph-guide {
