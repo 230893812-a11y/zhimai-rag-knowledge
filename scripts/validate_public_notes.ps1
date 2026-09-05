@@ -2,7 +2,11 @@ param([string]$ContentPath = "quartz-knowledge-site/content")
 $required = @('title','category','tags','source','updated','status','visibility')
 $allowedStatus = @('draft','active','archived')
 $errors = @()
-$files = Get-ChildItem -LiteralPath $ContentPath -Recurse -Filter *.md | Where-Object { $_.Name -notin @('资料模板.md','index.md','graph.md','全库图谱.md','全屏知识图谱.md','产品介绍.md','常见问题.md','内容与隐私说明.md','使用指南.md') }
+$root = (Resolve-Path $ContentPath).Path
+$files = Get-ChildItem -LiteralPath $ContentPath -Recurse -Filter *.md | Where-Object {
+  $relative = $_.FullName.Substring($root.Length).TrimStart('\\')
+  ($relative -split '\\').Count -ge 3 -and $_.Name -ne 'index.md'
+}
 foreach ($file in $files) {
   $text = Get-Content -LiteralPath $file.FullName -Raw
   if (-not $text.StartsWith('---')) { $errors += ($file.FullName + ': missing frontmatter'); continue }
