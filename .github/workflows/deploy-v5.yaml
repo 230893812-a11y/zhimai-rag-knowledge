@@ -52,6 +52,9 @@ jobs:
       - name: Build Quartz
         run: npx quartz build -d content/imported/langjian-knowledge-2026-v4 -v
 
+      - name: Compact content index for Pages file-size limit
+        run: python scripts/compact_content_index.py public/static/contentIndex.json --chars 600
+
       - name: Deploy to Cloudflare Pages
         uses: AdrianGonz97/refined-cf-pages-action@v1
         with:
