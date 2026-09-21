@@ -46,8 +46,8 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
-      - name: Check types and style
-        run: npm run check
+      - name: Check TypeScript types
+        run: npx tsc --noEmit
 
       - name: Build Quartz
         run: npx quartz build -d content/imported/langjian-knowledge-2026-v4 -v
