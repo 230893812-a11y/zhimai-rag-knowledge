@@ -525,7 +525,7 @@ export async function handleBuild(argv) {
 
         // does /trailing.html exist? if so, redirect to /trailing
         let base = fp.slice(0, -1)
-        if (path.extname(base) === "") {
+        if (!base.endsWith(".html")) {
           base += ".html"
         }
         if (fs.existsSync(path.posix.join(argv.output, base))) {
@@ -535,7 +535,7 @@ export async function handleBuild(argv) {
         // /regular
         // does /regular.html exist? if so, serve it
         let base = fp
-        if (path.extname(base) === "") {
+        if (!base.endsWith(".html")) {
           base += ".html"
         }
         if (fs.existsSync(path.posix.join(argv.output, base))) {

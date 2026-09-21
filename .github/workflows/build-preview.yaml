@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-preview:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
+    if: ${{ github.repository == '230893812-a11y/zhimai-rag-knowledge' }}
     runs-on: ubuntu-latest
     name: Build Preview
     steps:
@@ -45,7 +45,7 @@ jobs:
         run: npm run check
 
       - name: Build Quartz
-        run: npx quartz build -d docs -v
+        run: npx quartz build -d content/imported/langjian-knowledge-2026-v4 -v
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7

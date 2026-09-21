@@ -1,9 +1,9 @@
-name: Deploy v5 Preview
+name: Deploy production site
 
 on:
   push:
     branches:
-      - v5
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,10 +11,10 @@ permissions:
   deployments: write
 
 jobs:
-  deploy-v5:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
+  deploy-production:
+    if: ${{ github.repository == '230893812-a11y/zhimai-rag-knowledge' }}
     runs-on: ubuntu-latest
-    name: Deploy v5 to Cloudflare Pages
+    name: Deploy production to Cloudflare Pages
     steps:
       - uses: actions/checkout@v6
         with:
@@ -50,7 +50,7 @@ jobs:
         run: npm run check
 
       - name: Build Quartz
-        run: npx quartz build -d docs -v
+        run: npx quartz build -d content/imported/langjian-knowledge-2026-v4 -v
 
       - name: Deploy to Cloudflare Pages
         uses: AdrianGonz97/refined-cf-pages-action@v1
@@ -58,7 +58,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: quartz
-          deploymentName: v5 Branch Preview
-          branch: v5
+          projectName: zhimai-rag-knowledge
+          deploymentName: Production main
+          branch: main
           directory: public
