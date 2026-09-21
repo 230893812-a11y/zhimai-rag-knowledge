@@ -14,7 +14,7 @@ permissions:
 jobs:
   deploy-preview:
     if: ${{ github.repository == '230893812-a11y/zhimai-rag-knowledge' && github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     name: Deploy Preview to Cloudflare Pages
     steps:
       - name: Download build artifact

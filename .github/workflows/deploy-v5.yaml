@@ -13,7 +13,7 @@ permissions:
 jobs:
   deploy-production:
     if: ${{ github.repository == '230893812-a11y/zhimai-rag-knowledge' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     name: Deploy production to Cloudflare Pages
     steps:
       - uses: actions/checkout@v6
