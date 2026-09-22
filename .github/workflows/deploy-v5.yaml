@@ -50,7 +50,7 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Build Quartz
-        run: npx quartz build -d content/imported/langjian-knowledge-2026-v4 -v
+        run: node quartz/bootstrap-cli.mjs build -d content/imported/langjian-knowledge-2026-v4 -v
 
       - name: Compact content index for Pages file-size limit
         run: python scripts/compact_content_index.py public/static/contentIndex.json --chars 600
