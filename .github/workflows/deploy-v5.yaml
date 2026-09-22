@@ -44,7 +44,7 @@ jobs:
       - run: npm install
 
       - name: Install Quartz plugins
-        run: npx quartz plugin install
+        run: node quartz/bootstrap-cli.mjs plugin install
 
       - name: Check TypeScript types
         run: npx tsc --noEmit
