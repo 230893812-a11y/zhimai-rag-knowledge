@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: 知脉 RAG 知识库
-  pageTitleSuffix: " · 知脉 RAG"
+  pageTitle: 小鼎的知识库
+  pageTitleSuffix: " · 小鼎的知识库"
   enableSPA: true
   enablePopovers: true
   analytics: null
