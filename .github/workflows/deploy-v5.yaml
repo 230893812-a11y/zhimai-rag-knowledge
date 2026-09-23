@@ -58,6 +58,14 @@ jobs:
       - name: Build Quartz
         run: node quartz/bootstrap-cli.mjs build -d content/imported/langjian-knowledge-2026-v4 -v
 
+      - name: Copy graph assets into public output
+        run: |
+          mkdir -p public/static/graph-app
+          cp static/graph-app/index.html public/static/graph-app/index.html
+          cp static/graph-app/style.css public/static/graph-app/style.css
+          cp static/graph-app/sigma.bundle.js public/static/graph-app/sigma.bundle.js
+          cp static/graph-app/graph-data.json public/static/graph-app/graph-data.json
+
       - name: Compact content index for Pages file-size limit
         run: python scripts/compact_content_index.py public/static/contentIndex.json --chars 600
 
