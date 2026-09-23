@@ -49,6 +49,12 @@ jobs:
       - name: Check TypeScript types
         run: npx tsc --noEmit
 
+      - name: Build graph data
+        run: python scripts/build_graph_data.py
+
+      - name: Validate graph data
+        run: python scripts/validate_graph_data.py
+
       - name: Build Quartz
         run: node quartz/bootstrap-cli.mjs build -d content/imported/langjian-knowledge-2026-v4 -v
 
